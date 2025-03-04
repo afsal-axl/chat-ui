@@ -1,0 +1,16 @@
+---
+version: 1.0
+tasks:
+  add_numbers:
+    action: core.noop
+    input:
+      num1: <% $.num1 %>
+      num2: <% $.num2 %>
+    next:
+      - when: '<% succeeded() %>'
+        publish:
+          result: <%.num1 + $.num2 %>
+          success: true
+        do:
+          - core.echo:
+              message: The sum is <% $.result %>
