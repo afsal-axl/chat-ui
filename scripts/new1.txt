@@ -1,0 +1,15 @@
+---
+name: add_numbers
+pack: AI_Generated
+description: Workflow to add two numbers
+runner_type: orquesta
+entry_point: workflows/add_numbers_workflow.yaml
+parameters:
+  num1:
+    type: integer
+    description: The first number to add
+    required: true
+  num2:
+    type: integer
+    description: The second number to add
+    required: true
